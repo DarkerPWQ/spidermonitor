@@ -29,7 +29,7 @@ public class Processor {
 
     private String hostName;
     private String body;
-    private String username = "manage";//写死11
+    private String username = "manage";//写死11222
     private String baseUrl = "https://192.168.161.+hostName";
     private WebClient webClient;
     HashMap<String, String> header = new HashMap();
