@@ -11,4 +11,5 @@ public class Constants {
     public final static String SPIDER_NAME = "服务器监控";
     public final static String Host_1=  "38";
     public final static String HOST_2 = "201";
+    public final static int TRYAGAIN = 3;
 }

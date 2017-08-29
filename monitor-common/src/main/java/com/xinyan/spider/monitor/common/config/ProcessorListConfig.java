@@ -1,24 +1,31 @@
 package com.xinyan.spider.monitor.common.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
+
 /**
  * @Author：WenqiangPu
- * @Description
+ * @Description 配置服务器列表
  * @Date：Created in 13:58 2017/8/1
  * @Modified By：
  */
-@Configuration
+
+@Component
+@ConfigurationProperties(prefix = "host")
+@PropertySource("classpath:application.properties")
 public class ProcessorListConfig {
-    @Bean
-    public List<String> processorList(){
-        List<String> processorList = new ArrayList();
-        processorList.add("38");
-        processorList.add("201");
-        return processorList;
+    private List<String> list;
+
+    public List<String> getList() {
+        return list;
+    }
+
+    public void setList(List<String> list) {
+        this.list = list;
     }
 
 }
+
