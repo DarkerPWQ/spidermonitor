@@ -27,7 +27,7 @@ public class TaskServer {
     private Logger logger = LoggerFactory.getLogger(TaskServer.class);
     @PostConstruct
     public void start(){
-        logger.info(">开始启动[{}]爬虫任务...", Constants.SPIDER_NAME);
+        logger.info(">开始启动[{}]爬虫任务dev...", Constants.SPIDER_NAME);
         try{
             executorService.execute(spiderServer);
         }catch (Exception e){
