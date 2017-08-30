@@ -9,5 +9,6 @@ import com.xinyan.spider.monitor.model.MonitorInfo;
  * @Modified By：
  */
 public interface MonitorInfoDao {
+    //在master上修改
     int add(MonitorInfo monitorInfo);
 }
